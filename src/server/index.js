@@ -3,24 +3,24 @@
 const express = require("express");
 const app = express();
 const fs = require("fs");
-const path = require('path');
+const path = require("path");
 
 const BAD_REQUEST_HTTP_CODE = 400;
 const PARTIAL_CONTENT_REQUEST_HTTP_CODE = 206;
 
 app.get("/", function (req, res) {
-    res.sendFile(path.resolve(__dirname + "/../client/index.html"));
+  res.sendFile(path.resolve(__dirname + "/../client/index.html"));
 });
 
 app.get("/api/video/sample", function (req, res) {
   // Ensure there is given a range given for the video
   const range = req.headers.range;
   if (!range) {
-   return res.status(BAD_REQUEST_HTTP_CODE).send("Requires range header");
+    return res.status(BAD_REQUEST_HTTP_CODE).send("Requires range header");
   }
 
   // get video stat (around 61MB)
-  const videoPath = __dirname +  "/assets/video/sample.mp4";
+  const videoPath = __dirname + "/assets/video/sample.mp4";
   const videoSize = fs.statSync(videoPath).size;
 
   // Parse range
@@ -49,7 +49,7 @@ app.get("/api/video/sample", function (req, res) {
   // Stream the video chunk to the client
   videoStream.pipe(res);
 });
- 
+
 const PORT = 8000;
 app.listen(PORT, function () {
   console.log(`Listening on port ${PORT}!`);
