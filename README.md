@@ -6,7 +6,7 @@ The client makes has a tag `video` which source is a WEB API that send a video r
 
 # Preview App
 
-![Image preview](../video-stream-manager/docs/img/preview.png)
+![Image preview](/docs/img/preview.png)
 
 # CLI commands
 
