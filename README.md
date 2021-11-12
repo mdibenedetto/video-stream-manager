@@ -15,6 +15,6 @@ The client makes has a tag `video` which source is a WEB API that send a video r
 # Reference
 
 - [blog-code-examples/http-video-stream/](https://www.youtube.com/watch?v=ZjBLbXUuyWg&t=5s)
-- [How To Code A Video Streaming Server in NodeJS]([https://link](https://github.com/Abdisalan/blog-code-examples/tree/master/http-video-stream))
-- [Sample-videos]([https://link](https://sample-videos.com/))
+- [How To Code A Video Streaming Server in NodeJS](https://github.com/Abdisalan/blog-code-examples/tree/master/http-video-stream)
+- [Sample-videos](https://sample-videos.com/)
 
